@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+function clock(i)
+{
+     var today=new Date();
+     var h=today.getHours();
+     var m=today.getMinutes();
+     var s=today.getSeconds();
+     if(m<10)
+             m='0'+m;
+     if(s<10)
+             s='0'+s;
+     if(h<10)
+             h='0'+h;
+     document.getElementById("time").innerHTML=h+":"+m+":"+s;
+     setTimeout(clock, 1000);
+}
+</script>
+</head>
+<body>
+           <input type="submit" value="time" onclick="clock()">
+           <p id="time"></p>
+</body>
+</html>
